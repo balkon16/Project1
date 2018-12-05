@@ -6,3 +6,4 @@ __pycache__/
 *.py[cod]
 goodreads_API.txt
 testowe/*
+*.xlsx
