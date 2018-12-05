@@ -35,9 +35,5 @@ def reset():
 
 @app.route("/table")
 def table():
-    db_info = os.getenv("DATABASE_URL")
     users = db.execute("SELECT * FROM users").fetchall()
-    """Połączenie z bazą zajmuje zbyt dużo czasu - nigdy się nie kończy.
-    Nic nie zwraca"""
-    #users = ['user1', 'user2']
-    return render_template("table.html", users=users, info=db_info)
+    return render_template("table.html", users=users)
