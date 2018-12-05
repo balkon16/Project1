@@ -5,3 +5,4 @@ run_before.sh
 __pycache__/
 *.py[cod]
 goodreads_API.txt
+testowe/*
