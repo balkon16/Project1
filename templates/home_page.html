@@ -38,6 +38,6 @@ ExcellentReads
   <p>Not a registered user? You can register by clicking the button:</p>
 </div>
 
-<button type="submit" class="btn btn-primary" onclick="location.href='register.html'">Register</button>
+<a href="{{ url_for('register') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Register</a>
 
 {% endblock %}

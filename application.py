@@ -24,3 +24,7 @@ db = scoped_session(sessionmaker(bind=engine))
 @app.route("/")
 def index():
     return render_template("home_page.html")
+
+@app.route("/register")
+def register():
+    return render_template("register.html")
