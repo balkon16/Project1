@@ -7,12 +7,11 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 
 app = Flask(__name__)
 
-
 # Check for environment variable
 if not os.getenv("DATABASE_URL"):
     raise RuntimeError("DATABASE_URL is not set")
 
-# Configure session to use filesystem
+#Configure session to use filesystem
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
@@ -36,5 +35,9 @@ def reset():
 
 @app.route("/table")
 def table():
+    db_info = os.getenv("DATABASE_URL")
     users = db.execute("SELECT * FROM users").fetchall()
-    return render_template("table.html", users=users)
+    """Połączenie z bazą zajmuje zbyt dużo czasu - nigdy się nie kończy.
+    Nic nie zwraca"""
+    #users = ['user1', 'user2']
+    return render_template("table.html", users=users, info=db_info)
