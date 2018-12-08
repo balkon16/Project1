@@ -10,44 +10,15 @@ ExcellentReads
   <p>If you are a registered user insert your email address. We will send a link to reset your password.</p>
 </div>
 
-<form class="form-horizontal">
-  <!-- wcześniej było action=""-->
+<form class="form-horizontal" action="{{ url_for('check_reset') }}" method="post">
   <div class="form-group">
     <label class="control-label col-sm-2" for="email">Email:</label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="email_reset_pwd" placeholder="Enter email">
+      <input type="email" class="form-control" name="email_reset_pwd" placeholder="Enter email">
     </div>
-    <!-- <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
-        <br>
-        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#sentModal">Submit</button>
-      </div>
-    </div> -->
+    <br><br>
+    <button type="submit" class="btn btn-primary">Reset password</button>
 </form>
 <br>
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sentModal">
-  Reset password
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="sentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Link sent</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Please check your inbox.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 {% endblock %}

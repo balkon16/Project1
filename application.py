@@ -32,7 +32,7 @@ def register():
 
 @app.route("/reset")
 def reset():
-    return render_template("reset.html")
+    return render_template("reset.html", message="")
 
 ### do usunięcia ####
 @app.route("/table")
@@ -67,4 +67,17 @@ def login_next():
         message = "Wrong username or password."
         return render_template("error.html", message=message)
     message="Login completed!"
+    return render_template("success.html", message=message)
+
+@app.route("/check_reset", methods=["POST"])
+def check_reset():
+    email = request.form.get("email_reset_pwd")
+    if email == "":
+        message="We need your email address."
+        return render_template("error.html", message=message)
+    if db.execute("SELECT * FROM users WHERE email = :email",
+        {"email": email}).rowcount == 0:
+        message="You are not registered or you haven't used your email address."
+        return render_template("error.html", message=message)
+    message="Please check you inbox."
     return render_template("success.html", message=message)
