@@ -57,3 +57,14 @@ def register_next():
     pwd_rep = request.form.get("pwd_rep")
     message = "test message"
     return render_template("success.html", message=message)
+
+@app.route("/login_next", methods=["POST"])
+def login_next():
+    login = request.form.get("login")
+    pwd = request.form.get("inputPassword")
+    if db.execute("SELECT * FROM users WHERE login = :login AND pwd = :pwd",
+        {"login": login, "pwd": pwd}).rowcount == 0:
+        message = "Wrong username or password."
+        return render_template("error.html", message=message)
+    message="Login completed!"
+    return render_template("success.html", message=message)
