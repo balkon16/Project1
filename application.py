@@ -49,9 +49,30 @@ def register_next():
     pwd = request.form.get("pwd") #obowiązkowy
     pwd_rep = request.form.get("pwd_rep") #obowiązkowy
 
-    
+    #message = "First name: {}".format(username)
+    #message = "aaa"
+    #return render_template("success.html", message=message)
+
+    if username == "" or pwd == "" or pwd_rep == "":
+        message = "Please provide a username and a password"
+        return render_template("error.html", message=message)
+
+    if db.execute("SELECT * FROM users WHERE login = :username",
+            {"username": username}).rowcount > 0:
+            message="User already registered."
+            return render_template("error.html", message=message)
+    if pwd != pwd_rep:
+        message="Passwords must match."
+        return render_template("error.html", message=message)
+
+    #db.execute("INSERT INTO users ")
     message = "test message"
     return render_template("success.html", message=message)
+
+
+    # db.execute("INSERT INTO passengers (name, flight_id) VALUES (:name, :flight_id)",
+    #         {"name": name, "flight_id": flight_id})
+    # db.commit()
 
 @app.route("/login_next", methods=["POST"])
 def login_next():
