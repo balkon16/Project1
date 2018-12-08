@@ -45,9 +45,11 @@ def register_next():
     first_name = request.form.get("first_name")
     last_name = request.form.get("last_name")
     email = request.form.get("email")
-    username = request.form.get("username")
-    pwd = request.form.get("pwd")
-    pwd_rep = request.form.get("pwd_rep")
+    username = request.form.get("username") #obowiązkowy
+    pwd = request.form.get("pwd") #obowiązkowy
+    pwd_rep = request.form.get("pwd_rep") #obowiązkowy
+
+    
     message = "test message"
     return render_template("success.html", message=message)
 
