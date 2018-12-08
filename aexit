@@ -1,0 +1,185 @@
+[33mcommit 89bde160f9ecc4947f9b685f7741cfd9a08128b7[m[33m ([m[1;36mHEAD -> [m[1;32mregistration[m[33m, [m[1;31morigin/registration[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Sat Dec 8 17:40:20 2018 +0100
+
+    deleted table.html - a testing page
+
+[33mcommit a2ecceb457d53efebcfb3d0f19d5f4a999bcb0eb[m[33m ([m[1;32mreset_pwd[m[33m)[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Sat Dec 8 17:37:33 2018 +0100
+
+    added reset password procedure
+
+[33mcommit 0ab016992b2a2c7842182ffa6f7c59c0ea7e9f10[m[33m ([m[1;31morigin/login_validation[m[33m, [m[1;32mlogin_validation[m[33m)[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Sat Dec 8 17:20:56 2018 +0100
+
+    login operation completed
+
+[33mcommit ecdd3aa905fb9f86e420402baec5922cef5b2277[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Sat Dec 8 15:35:28 2018 +0100
+
+    POST method present
+
+[33mcommit 91f54f82e9417de4bcdf43da72cc5b5ac88cb21e[m[33m ([m[1;31morigin/logout[m[33m, [m[1;32mlogout[m[33m)[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Sat Dec 8 14:41:14 2018 +0100
+
+    added logout page; only layout, no session stuff
+
+[33mcommit 120aa77607ee65716b37c71b6ce426eb9b8685a4[m[33m ([m[1;32mimport_books[m[33m)[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Sat Dec 8 14:33:42 2018 +0100
+
+    created import from books.csv to Heroku-based postgreSQL
+
+[33mcommit 76c5dddb697cc6e95a200e0cd2d5ca1e37153f2b[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Sat Dec 8 14:14:54 2018 +0100
+
+    added import_flights.py to ignored files
+
+[33mcommit ca86a1d43d78fd956d49db2551fed36eb49feae9[m[33m ([m[1;31morigin/tabela_test[m[33m)[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 19:25:16 2018 +0100
+
+    minor changes to application.py
+
+[33mcommit 4593dbaea694a746133b94b944b84bdbe6e8965e[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 19:23:20 2018 +0100
+
+    successfully printed Heroku table in the app
+
+[33mcommit 04c984d4503ad270eaa4560373a91565ed6cd615[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 18:48:24 2018 +0100
+
+    table not working
+
+[33mcommit c2bac5cfb22772987f1ced1bc4056d66f481d207[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 18:14:21 2018 +0100
+
+    added red asterisk for few elements in the registration form
+
+[33mcommit d04f9d59e4f6839e3ab038c9325a2bf40892b03f[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 18:07:35 2018 +0100
+
+    minor changes to register.html form
+
+[33mcommit b96f7ab43b7fe55682170111f00136e0195ae5aa[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 18:00:03 2018 +0100
+
+    changed labels in register.html
+
+[33mcommit c6a99b2cbc03a8e8e44a33f1f0f12db38545bb81[m[33m ([m[1;31morigin/navbars[m[33m)[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 17:48:35 2018 +0100
+
+    added navbar
+
+[33mcommit 06aee5d3953ea4c2a8b59790bb11c2bde288f1d1[m[33m ([m[1;31morigin/reset_pwd[m[33m)[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 14:04:46 2018 +0100
+
+    added modal to the rest page
+
+[33mcommit 21d3be2222a63d866e80432656aa516699ed1b6f[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 13:40:06 2018 +0100
+
+    added password reset page
+
+[33mcommit 8de2be0d37f5ce75b847b714574f018b8ff0cc32[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 13:27:56 2018 +0100
+
+    added a form to the registration page
+
+[33mcommit 011bd6c6e7d2ce1c758c1e46099841d21228118f[m[33m ([m[1;31morigin/home_page[m[33m)[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 13:13:51 2018 +0100
+
+    working registration button
+
+[33mcommit 0c71e7c46146a9479058014f64bc639d2e286f72[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 12:54:25 2018 +0100
+
+    added a register button redirecting to register.html
+
+[33mcommit 39aa1edc0438ff5f38c2743a77f790dad3167702[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 12:46:24 2018 +0100
+
+    added a register button; the button has not link
+
+[33mcommit c4ddbe69c54bfcff94d0c97a24a248d05f3a4d76[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 12:42:59 2018 +0100
+
+    added a static home_page.html
+
+[33mcommit 232ef171b1e50404b12ef84c49c26cf1a0255db2[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 12:31:16 2018 +0100
+
+    added templates directory; layout.html file created
+
+[33mcommit 0293cfbd448ee8e8afea8ebf8a87f2369dadb4c2[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 12:23:25 2018 +0100
+
+    added requirements needed to run the project
+
+[33mcommit 600786dc703dc699fa7f71dfdb73d585110a1d7a[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 12:12:22 2018 +0100
+
+    added xlsx format in .gitignore
+
+[33mcommit ca9146563b836bac1a9c9a1ad60fc42ee80a5f1d[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 12:09:45 2018 +0100
+
+    added testowe as an ignored folder
+
+[33mcommit ca5f395611e20af91b91e6ed5effe17a75d68f5e[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 12:08:07 2018 +0100
+
+    added GoodreadsAPI credentials to .gitignore
+
+[33mcommit 861b867d522cd2c79399a2afd02c678e6eaddd97[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 11:39:05 2018 +0100
+
+    added files to .gitignore; added flask_session tracking
+
+[33mcommit 85453fa43fc7a66e99a80b542a831be5eba8841c[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 11:26:38 2018 +0100
+
+    added run_before.sh to .gitignore
+
+[33mcommit b0a8106f508a26c6506d46c0e3b9cb4e2ca7144b[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 11:13:00 2018 +0100
+
+    added a file to .gitignore
+
+[33mcommit 26de3f7db1b3fd689b7196fcef045f870f08fa7c[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 11:08:36 2018 +0100
+
+    .gitignore added
+
+[33mcommit f196bc5964a44927345045ca4563c10ef8bc9842[m
+Author: balkon16 <pawel.k.lonca@gmail.com>
+Date:   Wed Dec 5 11:08:14 2018 +0100
+
+    initial commit; .gitignore created

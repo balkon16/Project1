@@ -32,7 +32,14 @@ def register():
 
 @app.route("/reset")
 def reset():
-    return render_template("reset.html", message="")
+    return render_template("reset.html")
+
+### do usunięcia ####
+@app.route("/table")
+def table():
+    users = db.execute("SELECT * FROM users").fetchall()
+    return render_template("table.html", users=users)
+#####################
 
 @app.route("/logout")
 def logout():
@@ -49,28 +56,4 @@ def register_next():
     pwd = request.form.get("pwd")
     pwd_rep = request.form.get("pwd_rep")
     message = "test message"
-    return render_template("success.html", message=message)
-
-@app.route("/login_next", methods=["POST"])
-def login_next():
-    login = request.form.get("login")
-    pwd = request.form.get("inputPassword")
-    if db.execute("SELECT * FROM users WHERE login = :login AND pwd = :pwd",
-        {"login": login, "pwd": pwd}).rowcount == 0:
-        message = "Wrong username or password."
-        return render_template("error.html", message=message)
-    message="Login completed!"
-    return render_template("success.html", message=message)
-
-@app.route("/check_reset", methods=["POST"])
-def check_reset():
-    email = request.form.get("email_reset_pwd")
-    if email == "":
-        message="We need your email address."
-        return render_template("error.html", message=message)
-    if db.execute("SELECT * FROM users WHERE email = :email",
-        {"email": email}).rowcount == 0:
-        message="You are not registered or you haven't used your email address."
-        return render_template("error.html", message=message)
-    message="Please check you inbox."
     return render_template("success.html", message=message)
