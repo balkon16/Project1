@@ -34,13 +34,6 @@ def register():
 def reset():
     return render_template("reset.html", message="")
 
-### do usunięcia ####
-@app.route("/table")
-def table():
-    users = db.execute("SELECT * FROM users").fetchall()
-    return render_template("table.html", users=users)
-#####################
-
 @app.route("/logout")
 def logout():
     #trzeba dodać coś co wyłącza sesje użytkownika;
