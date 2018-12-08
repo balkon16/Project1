@@ -65,14 +65,14 @@ def register_next():
         message="Passwords must match."
         return render_template("error.html", message=message)
 
-    #db.execute("INSERT INTO users ")
-    message = "test message"
+    db.execute("INSERT INTO users (login, pwd, email, first_name, last_name)\
+                    VALUES (:username, :pwd, :email, :first_name, :last_name)",
+                    {"username": username, "pwd": pwd, "email": email, \
+                    "first_name": first_name, "last_name": last_name})
+    db.commit()
+    message = "New user has been added."
     return render_template("success.html", message=message)
 
-
-    # db.execute("INSERT INTO passengers (name, flight_id) VALUES (:name, :flight_id)",
-    #         {"name": name, "flight_id": flight_id})
-    # db.commit()
 
 @app.route("/login_next", methods=["POST"])
 def login_next():
