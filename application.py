@@ -4,6 +4,7 @@ from flask import Flask, session, render_template, request
 from flask_session import Session
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
+import requests
 
 app = Flask(__name__)
 
@@ -93,3 +94,14 @@ def check_reset():
         return render_template("error.html", message=message)
     message="Please check you inbox."
     return render_template("success.html", message=message)
+
+@app.route("/api/<string:isbn>")
+def goodreads(isbn):
+    #TODO1: obsługa istniejących ISBN działa; nie wiem jak obsługiwać
+    #niepoprawne ISBN
+    #TODO2: wyświetlać wybrane pola w ładnym formacie
+    res = requests.get("https://www.goodreads.com/book/review_counts.json",
+    params={"key": "wfxe1FhSbZOGjXSrWulWVQ", "isbns": isbn})
+    # if res is None:
+    #     return render_template("404.html")
+    return render_template("success.html", message=res.json())
