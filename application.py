@@ -49,10 +49,6 @@ def register_next():
     pwd = request.form.get("pwd") #obowiązkowy
     pwd_rep = request.form.get("pwd_rep") #obowiązkowy
 
-    #message = "First name: {}".format(username)
-    #message = "aaa"
-    #return render_template("success.html", message=message)
-
     if username == "" or pwd == "" or pwd_rep == "":
         message = "Please provide a username and a password"
         return render_template("error.html", message=message)
