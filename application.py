@@ -100,8 +100,25 @@ def goodreads(isbn):
     #TODO1: obsługa istniejących ISBN działa; nie wiem jak obsługiwać
     #niepoprawne ISBN
     #TODO2: wyświetlać wybrane pola w ładnym formacie
-    res = requests.get("https://www.goodreads.com/book/review_counts.json",
-    params={"key": "wfxe1FhSbZOGjXSrWulWVQ", "isbns": isbn})
-    # if res is None:
-    #     return render_template("404.html")
-    return render_template("success.html", message=res.json())
+
+    # https://www.goodreads.com/api/index#book.show_by_isbn <-- chodzi o tą metodę GET
+    #poniższa strona zawiera potrzebne mi dane; muszę zczytać XML w Pythonie:
+    #https://www.goodreads.com/book/isbn/0441172717?key=wfxe1FhSbZOGjXSrWulWVQ
+
+    ###example from project's website
+    # res = requests.get("https://www.goodreads.com/book/review_counts.json",
+    # params={"key": "wfxe1FhSbZOGjXSrWulWVQ", "isbns": isbn})
+    ###
+
+    res1 = requests.get("https://www.goodreads.com/book/isbn_to_id/{}?key={}".format(isbn, "wfxe1FhSbZOGjXSrWulWVQ"))
+    book_id = res1.json()
+
+    res2 = requests.get("https://www.goodreads.com/book/isbn/{}?key={}".format(isbn, "wfxe1FhSbZOGjXSrWulWVQ"))
+    #full_book = res2.json()
+
+    res3 = requests.get("https://www.goodreads.com/book/isbn",
+                        params={"key": "wfxe1FhSbZOGjXSrWulWVQ", "isbn": isbn, "format": "json"})
+
+
+
+    return render_template("success.html", message=res3.json())
