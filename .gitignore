@@ -8,3 +8,4 @@ goodreads_API.txt
 testowe/*
 *.xlsx
 import_flights.py
+user_logged_in.py
