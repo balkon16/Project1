@@ -9,3 +9,4 @@ testowe/*
 *.xlsx
 import_flights.py
 user_logged_in.py
+/flask-login-example/*

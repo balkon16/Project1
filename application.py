@@ -1,9 +1,10 @@
 import os
 
-from flask import Flask, session, render_template, request
+from flask import Flask, session, render_template, request, redirect, url_for, escape
 from flask_session import Session
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
+from flask_login import LoginManager, login_user
 import requests
 
 app = Flask(__name__)
@@ -21,7 +22,6 @@ Session(app)
 engine = create_engine(os.getenv("DATABASE_URL"))
 db = scoped_session(sessionmaker(bind=engine))
 
-
 @app.route("/")
 def index():
     return render_template("home_page.html")
@@ -29,7 +29,6 @@ def index():
 @app.route("/register")
 def register():
     return render_template("register.html")
-
 
 @app.route("/reset")
 def reset():
@@ -71,7 +70,7 @@ def register_next():
     return render_template("success.html", message=message)
 
 
-@app.route("/login_next", methods=["POST"])
+@app.route("/login_next", methods=["GET", "POST"])
 def login_next():
     login = request.form.get("login")
     pwd = request.form.get("inputPassword")
